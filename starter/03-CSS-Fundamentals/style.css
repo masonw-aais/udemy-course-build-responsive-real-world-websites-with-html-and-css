@@ -1,0 +1,72 @@
+/* css always starts with a selector (i.e h1)
+next is the declaration, which consists of a property, followed by the value (i.e. color: blue) */
+h1,
+h2,
+h3,
+h4,
+p,
+li {
+  font-family: serif;
+}
+
+h1 {
+  font-size: 26px;
+  text-transform: uppercase;
+  font-style: italic;
+  /*font-family must be installed on users computer to register, so it's important to make sure that font's are generalized enough to be recognized - this will be addressed later*/
+}
+
+h2 {
+  font-size: 40px;
+  /*Just because the h1 is the first heading, it doesn't mean that it has to be the biggest, it is more about semantics*/
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center; /*aligns text within the parent element or page*/
+}
+
+p {
+  font-size: 22px;
+  line-height: 1.5; /* by default, the value is 1. 1.5 signifies it is 1.5 times the font size*/
+}
+
+li {
+  font-size: 20px;
+}
+
+/* footer p {
+  font-size: 16px;
+} */
+
+/* article header p {
+  font-style: italic;
+} */
+
+#author {
+  font-style: italic;
+  font-size: 18px;
+}
+
+#copyright {
+  font-size: 16px;
+}
+
+/* id names are only allowed to be used once they are not repeatible. In other words, once you use it in one specific location, you cannot use it in another within HTML. You must use class instead. */
+
+.related-author {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* ul {
+  list-style: none;
+} */
+.related {
+  list-style: none;
+}
