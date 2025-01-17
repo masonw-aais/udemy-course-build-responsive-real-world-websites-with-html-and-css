@@ -7,13 +7,20 @@ h4,
 p,
 li {
   font-family: serif;
+  color: #444;
+}
+/*font-family must be installed on users computer to register, so it's important to make sure that font's are generalized enough to be recognized - this will be addressed later*/
+
+h1,
+h2,
+h3 {
+  color: #1098ad;
 }
 
 h1 {
   font-size: 26px;
   text-transform: uppercase;
   font-style: italic;
-  /*font-family must be installed on users computer to register, so it's important to make sure that font's are generalized enough to be recognized - this will be addressed later*/
 }
 
 h2 {
@@ -57,7 +64,11 @@ li {
   font-size: 16px;
 }
 
-/* id names are only allowed to be used once they are not repeatible. In other words, once you use it in one specific location, you cannot use it in another within HTML. You must use class instead. */
+/* 
+id names are only allowed to be used once they are not repeatible. In other words, once you use it in one specific location, you cannot use it in another within HTML. You must use class instead.
+
+***Best practice is to not use id's at all. Use classes, even if you only use them once.***
+*/
 
 .related-author {
   font-size: 18px;
@@ -69,4 +80,73 @@ li {
 } */
 .related {
   list-style: none;
+}
+
+.main-header {
+  background-color: #f7f7f7;
+}
+
+aside {
+  background-color: #f7f7f7;
+  /* border: 5px solid #1098ad; */
+  /* border is an example of using shorthand properties */
+  border-top: 5px solid #1098ad;
+  border-bottom: 5px solid #1098ad;
+}
+
+/* .first-li {
+  font-weight: bold;
+} */
+
+li:first-child {
+  font-weight: bold;
+}
+/* this is an example of a pseudoclass, signified by the : */
+
+li:last-child {
+  font-style: italic;
+}
+
+/* li:nth-child(2) {
+  color: red;
+} */
+
+/* li:nth-child(odd) {
+  color: red;
+} */
+
+/* li:nth-child(even) {
+  color: red;
+} */
+/* this technique is very helpful for styling tables */
+
+/* Misconception: This won't work */
+article p:first-child {
+  color: red;
+}
+
+/* 
+Styling Links
+LVHA: Commit this to memory as this is the sequence for styling links
+Links --> Visited --> Hover --> Active
+ */
+a:link {
+  color: #1098ad;
+  text-decoration: none;
+  /* removes underline in links */
+}
+
+a:visited {
+  color: #1098ad;
+}
+
+a:hover {
+  color: orangered;
+  font-weight: bold;
+  text-decoration: underline dotted orangered;
+}
+
+a:active {
+  background-color: black;
+  font-style: italic;
 }
