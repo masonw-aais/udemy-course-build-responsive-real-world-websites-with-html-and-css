@@ -1,0 +1,47 @@
+Resolving Conflicting Declarations:
+
+Priority from Highest to Lowest:
+
+    5.  Declarations marked !important
+
+    4.  Inline style (style attribute in html)
+
+    3.  ID (#) selector
+
+    2.  Class (.) or psuedo-class (:) selector
+
+    1.  Element selector (p, div, li, etc...)
+
+    0.  Universal Selector (*)
+
+If you have multiple of the same declaration, the last selector in the code applies (the one closest to the bottom of the code)
+
+INHERITANCE
+Most properties that get inherited are related to text.
+In our example, color, font-size, and font-family all get inherited from the body, while border-top does not. 
+
+
+BLOCK LEVEL ELEMENTS
+- Block level elements cannot be side-by-side to one another, they expand the width of their container (unless otherwise specified), the take up all the space they need horizontally
+- Examples, <body>, <main>, <header>, <footer>, <div>, <p>, <h1>-<h6>, <section>, <article>, etc.
+- Elements are formatted visually as blocks
+- Elements occupy 100% of paretn alement's width, no matter the content
+- Elements are stacked vertically by default, one after another
+- Most elements by default are displayed as block-level elements (display: block)
+
+INLINE ELEMENTS
+- They flow inline with surrounding text/content (they sit next to each other, similar to words in a paragraph)
+- Occupies on the space necessary for its content
+- Causes no line-breaks before or after the elements
+- Box model applies in a different way: heights and widths do not apply
+- Padding and margins are applied only horizontally (left and right)
+- examples: a, img, strong, em, button, etc.
+- display: inline
+
+INLINE-BLOCK ELEMENTS
+- Looks like an inline from the outside, behaves like block-level on the inside
+- Occupies only content's space
+- Causes no line-breaks
+- Box-model applies as showed
+- display: inline-block
+essentially, combines the best of both inline and block elements

@@ -1,16 +1,51 @@
 /* css always starts with a selector (i.e h1)
 next is the declaration, which consists of a property, followed by the value (i.e. color: blue) */
-h1,
-h2,
-h3,
-h4,
-p,
-li {
-  font-family: serif;
-  color: #444;
+* {
+  padding: 0;
+  margin: 0;
 }
-/*font-family must be installed on users computer to register, so it's important to make sure that font's are generalized enough to be recognized - this will be addressed later*/
 
+/* PAGE SECTIONS */
+body {
+  color: #444;
+  font-family: sans-serif;
+
+  border-top: 10px solid #1098ad;
+}
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.main-header {
+  background-color: #f7f7f7;
+  padding: 20px 40px;
+  margin-bottom: 60px;
+  /* height: 80px; */
+}
+
+article {
+  margin-bottom: 60px;
+}
+
+nav {
+  font-size: 18px;
+}
+
+.post-header {
+  margin-bottom: 40px;
+}
+
+aside {
+  background-color: #f7f7f7;
+  border-top: 5px solid #1098ad;
+  border-bottom: 5px solid #1098ad;
+  padding: 50px 0;
+  width: 500px;
+}
+
+/* SMALLER ELEMENTS */
 h1,
 h2,
 h3 {
@@ -25,11 +60,14 @@ h1 {
 
 h2 {
   font-size: 40px;
+  margin-bottom: 30px;
   /*Just because the h1 is the first heading, it doesn't mean that it has to be the biggest, it is more about semantics*/
 }
 
 h3 {
   font-size: 30px;
+  margin-bottom: 20px;
+  margin-top: 40px;
 }
 
 h4 {
@@ -40,11 +78,23 @@ h4 {
 
 p {
   font-size: 22px;
-  line-height: 1.5; /* by default, the value is 1. 1.5 signifies it is 1.5 times the font size*/
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+ul,
+ol {
+  margin-left: 50px;
+  margin-bottom: 20px;
 }
 
 li {
   font-size: 20px;
+  margin-bottom: 10px;
+}
+
+li:last-child {
+  margin-bottom: 0;
 }
 
 /* footer p {
@@ -80,18 +130,6 @@ id names are only allowed to be used once they are not repeatible. In other word
 } */
 .related {
   list-style: none;
-}
-
-.main-header {
-  background-color: #f7f7f7;
-}
-
-aside {
-  background-color: #f7f7f7;
-  /* border: 5px solid #1098ad; */
-  /* border is an example of using shorthand properties */
-  border-top: 5px solid #1098ad;
-  border-bottom: 5px solid #1098ad;
 }
 
 /* .first-li {
@@ -150,3 +188,45 @@ a:active {
   background-color: black;
   font-style: italic;
 }
+
+.post-image {
+  width: 100%;
+  height: auto;
+}
+
+nav a:link {
+  /* background-color: orangered;
+  margin: 20px;
+  padding: 20px;
+
+  display: block; */
+
+  margin-right: 20px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+nav a:link:last-child {
+  margin-right: 0;
+}
+/* LVHA */
+
+/* Resolving Conflicts */
+/* id */
+/* #copyright {
+  color: red;
+}
+
+.copyright {
+  color: blue;
+}
+
+.text {
+  color: yellow;
+}
+
+footer p {
+  color: green !important;
+} */
+
+/* REMEMBER: CASCADING Stylesheets - the last rule of equal value is the one that applies */
