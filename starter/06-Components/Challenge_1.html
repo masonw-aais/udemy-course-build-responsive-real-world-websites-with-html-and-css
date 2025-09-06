@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Challenge #1</title>
+
+    <style>
+      /*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+      /*
+MAIN COLOR: #087F5B
+GREY COLOR: #343a40
+
+*/
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        color: #343a40;
+        line-height: 1;
+        display: flex;
+        justify-content: center;
+      }
+
+      .pagination-container {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: 200px;
+      }
+
+      .btn {
+        border: 1px solid #087f5b;
+        background-color: transparent;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .btn:hover {
+        background-color: #087f5b;
+        cursor: pointer;
+      }
+
+      .btn:hover .btn-icon {
+        stroke: #fff;
+      }
+
+      .btn-icon {
+        width: 24px;
+        height: 24px;
+        stroke: #087f5b;
+      }
+
+      .page-number {
+        cursor: pointer;
+      }
+
+      .page-number:link,
+      .page-number:visited {
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+        color: #343a40;
+        text-decoration: none;
+        border-radius: 50%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .page-number:hover,
+      .page-number:active,
+      .page-number.page-number--current {
+        background-color: #087f5b;
+        color: #fff;
+      }
+
+      .dotdotdot {
+        color: #343a4063;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pagination-container">
+      <button class="btn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="btn-icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 19.5 8.25 12l7.5-7.5"
+          />
+        </svg>
+      </button>
+      <!-- <div class="page-numbers"> -->
+      <a href="#" class="page-number">1</a>
+      <a href="#" class="page-number">2</a>
+      <a href="#" class="page-number page-number--current">3</a>
+      <a href="#" class="page-number">4</a>
+      <a href="#" class="page-number">5</a>
+      <a href="#" class="page-number">6</a>
+      <span class="dotdotdot">...</span>
+      <a href="#" class="page-number">23</a>
+      <!-- </div> -->
+      <button class="btn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="btn-icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m8.25 4.5 7.5 7.5-7.5 7.5"
+          />
+        </svg>
+      </button>
+    </div>
+  </body>
+</html>
